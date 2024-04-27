@@ -202,7 +202,7 @@ drift_deflacion <- function(campos_monetarios) {
   )
 
   dataset[tb_IPC,
-    on = c(periodo = PARAM$dataset_metadata$periodo),
+    on = .(tb_IPC$periodo = PARAM$dataset_metadata$periodo),
     (campos_monetarios) := .SD * i.IPC,
     .SDcols = campos_monetarios
   ]
