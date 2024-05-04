@@ -197,7 +197,7 @@ drift_deflacion <- function(campos_monetarios) {
   )
 
   tb_IPC <- data.table(
-    "periodo" = vfoto_mes,
+    "foto_mes" = vfoto_mes,
     "IPC" = vIPC
   )
 
