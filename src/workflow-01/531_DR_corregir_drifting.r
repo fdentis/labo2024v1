@@ -246,7 +246,7 @@ drift_estandarizar <- function(campos_drift) {
     dataset[, paste0(campo, "_normal") := 
       (get(campo) -mean(campo, na.rm=TRUE)) / sd(get(campo), na.rm=TRUE),
       by = eval(PARAM$dataset_metadata$periodo)]
-    
+        
     dataset[, paste0(campo, "_normal") := as.numeric(dataset[[ paste0(campo, "_normal")]])]
     
     dataset[, (campo) := NULL]
