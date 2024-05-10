@@ -230,7 +230,7 @@ drift_deflacion_usd <- function(campos_monetarios) {
     "USD" = vUSD
   )
   
-  dataset[tb_IPC,
+  dataset[tb_USD,
           on = c(PARAM$dataset_metadata$periodo),
           (campos_monetarios) := .SD * i.USD,
           .SDcols = campos_monetarios
